@@ -80,6 +80,7 @@
       }
 
       clickCount++; // Povećaj broj klikova
+      localStorage.setItem('clickCount', clickCount); 
       counter.textContent = `${clickCount}`;
     });
   </script>
