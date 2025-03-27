@@ -70,7 +70,8 @@
     const counter = document.getElementById('clickCounter');
     let currentSize = 200; // Početna veličina
     const maxSize = 500;   // Maksimalna veličina
-    let clickCount = 0;    // Broj klikova
+    let clickCount = localStorage.getItem('clickCount') || 0; 
+    counter.textContent = `Broj klikova: ${clickCount}`; // Prikaz trenutnog broja klikova
 
     button.addEventListener('click', () => {
       if (currentSize < maxSize) {
